@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about | ソロナビ</title>
+    <link rel="stylesheet" href="/css/stylesheet.min.css">
+    <link rel="stylesheet" href="/css/contact.min.css">
+    <link rel="stylesheet" href="/css/responsive.min.css"><!-- レスポンシブ対応 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/common.js"></script>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!-- ページ周り余白カットのため -->
+    <div class="wrap">
+      <!--　👇ヘッダー -->
+      <script type="text/javascript">header();</script>
+
+
+    <main>
+      <div id="contents">
+        <div id="main-contents">
+          <div class="text-contents">
+            <ul class="links">
+              <li>
+                <a href="/"><i class="fa fa-home fa-lg"></i> ホーム</a>
+              </li>
+            </ul>
+            <h2>contact</h2>
+            <div class="page-fot">
+              <img src="/images/logo.jpeg"/>
+              <h2><i class="fas fa-coffee"></i>ソロナビ</h2>
+            </div>
+              <div class="contact-text">
+               <h3>いいお店見つけた！</h3>
+               <p>や</p>
+               <h3>ここ気になるんです！</h3>
+               <br />などなど<br />
+               <br />情報を提供してくださる方、是非下記のフォームよりご連絡ください。<br />
+               <br /><br />その他のお問い合わせに関しても、気軽にご連絡ください。
+             </div>
+             <div class="contact-form">
+
+               <form action="confirm.php" method="POST" name="form1">
+
+                 <p>お名前（ニックネーム可）　<span class="must">（必須）</span></p>
+                 <input class="form-box" type="text" name="name" >
+                 
+
+                 <p>メールアドレス<span class="must">（必須）</span></p>
+                 <input class="form-box" type="text" name="addres" value="">
+
+                 <p>内容<span class="must">（必須）</span></p>
+                 <textarea  name="contents" rows="8" cols="80"></textarea>
+                 <input id=contact_button  type="submit"  value="入力完了"  onclick="return check();">
+                 </form>
+
+                 <script type="text/javascript">
+                    function check() {
+                      if(document.form1.name.value == "" || document.form1.addres.value == "" || document.form1.contents.value == ""){
+                        alert("必須項目を入力してください！");
+                        return false ;
+                        }else  {
+                        return true;
+                    }
+                   }
+                 </script>
+
+
+
+             </div>
+
+
+          </div>
+        </div>
+
+        <!-- サイドバー　 -->
+        <script type="text/javascript">sidevar();</script>
+     </div>
+    </main>
+    <!--　👇フッター -->
+    <script type="text/javascript">footer();</script>>
+
+
+  </div>
+
+  　
+  　　<!--  javascript読込 -->
+
+  　<script src="javascript/script.js"></script>
+
+  </body>
+</html>
