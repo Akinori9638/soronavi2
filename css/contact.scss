@@ -1,0 +1,95 @@
+/*👇カラーインポート👇*/
+@import"_colors" ;
+
+/*👇ページロゴの型枠👇*/
+@mixin page-logo($color) {
+  color: $color;
+  letter-spacing:0.5em;
+  font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
+  font-weight: bold;
+}
+
+/*👇テキスト部の型枠👇*/
+.text-contents {
+  width:100% ;
+  padding:5%;
+  box-sizing: border-box;
+  background-color: white;
+  color:$text-color;
+}
+.links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+    a {
+      text-decoration: none;
+      color:$page-color;
+      margin-left:0.5em;
+    }
+    a:hover {
+      color:$text-color;
+    }
+    li::after {
+      content: ">" ;
+    }
+}
+
+/*👇テキスト部の写真など👇*/
+.page-fot {
+    position:relative;
+  img {
+    width: 100%;}
+   h2 {
+    @include page-logo($page-color);
+    font-size:2em;
+    position: absolute;
+    top:35%;
+    left:25%;}
+}
+
+/*👇送信完了ページ　テキスト👇*/
+.confirm-text {
+  line-height:2em;
+  margin-top:40px;
+  th {
+    text-align: left;
+    width:150px;
+  }
+
+
+}
+
+//👇コンタクトフォームテキスト👇//
+.contact-form {
+  margin-top:5em;
+  color:black;
+  font-weight: bold;
+  letter-spacing:0.5em;
+  textarea {
+    width: 100%;
+    background-color: $form-color;
+    border: none;
+  }
+}
+
+.form-box {
+  width: 100%;
+  height:2em;
+  background-color: $form-color;
+  border:none;
+}
+.must {
+  color:$alt-color;
+
+}
+
+#contact_button {
+  background-color: $alt-color ;
+  width:10em;
+  color:white;
+  font-size:1em;
+  margin-top:2em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
